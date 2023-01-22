@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:clock"
+		},
+		"background": "textures/gui/advancements/backgrounds/adventure.png",
+		"title": "Splits",
+		"description": "Speedrun Splits",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"single": {
+            "trigger": "minecraft:tick"
+		}
+	}
+}

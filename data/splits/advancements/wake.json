@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:red_bed"
+        },
+        "frame": "goal",
+        "title": "Wake up.",
+        "description": "Exit the End dimension.",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "splits:end",
+    "criteria": {
+        "single": {
+			"trigger": "minecraft:changed_dimension",
+			"conditions": {
+				"from": "minecraft:the_end",
+                "player": {
+                    "nbt": "{Tags:[\"splits_enabled\"]}"
+                }
+			}
+		}
+    },
+    "rewards": {
+        "function": "splits:time/wake"
+    }
+}

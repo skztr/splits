@@ -1,0 +1,34 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:dragon_head"
+        },
+        "frame": "goal",
+        "title": "Dragon",
+        "description": "Defeat the Ender Dragon.",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "splits:end",
+    "criteria": {
+        "single": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "nbt": "{Tags:[\"splits_enabled\"]}",
+                    "type": "minecraft:player",
+                    "type_specific": {
+                        "type": "player",
+                        "advancements": {
+                            "minecraft:end/kill_dragon": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "splits:time/dragon"
+    }
+}

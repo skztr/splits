@@ -1,0 +1,34 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:end_stone"
+        },
+        "frame": "goal",
+        "title": "End",
+        "description": "Enter the End dimension.",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "splits:stronghold",
+    "criteria": {
+        "single": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "nbt": "{Tags:[\"splits_enabled\"]}",
+                    "type": "minecraft:player",
+                    "type_specific": {
+                        "type": "player",
+                        "advancements": {
+                            "minecraft:story/enter_the_end": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "splits:time/end"
+    }
+}
